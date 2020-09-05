@@ -82,7 +82,7 @@ function game() {
     let computerScore = 0;
 
     // loop the gameplay for 5 total rounds
-    for (rounds = 1; rounds <= 5; rounds++) {
+    for (let rounds = 1; rounds <= 5; rounds++) {
         // print the current round and score to the console
         console.log("Round: " + rounds);
         console.log("Your Score: " + userScore + " Computer Score: " + computerScore);
@@ -113,4 +113,4 @@ function game() {
 }
 
 // run the gameplay loop!
-//game();
+// game();
