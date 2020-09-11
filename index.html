@@ -3,20 +3,76 @@
 	<head>
 		<title>Rock Paper Scissors</title>
 		<meta charset="UTF-8"/>
+		<link rel="stylesheet" href="style.css">
+		<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">  
 	</head>
 	<body>
-		<script src="rockpaperscissors.js"></script>
-		<h1>Rock, Paper Scissors</h1>
-		<p>Right now this game is only playable in the developer console, so you'll need that open to see any feedback. Here are some notes about how it plays:</p>		
-		<ol>
-			<li>The game plays five total rounds against the computer (not best of five).</li>
-			<li>If you tie with the computer, you get to do that round over.</li>
-			<li>The program accepts "rock," "paper," or "scissors" as input. Input is not case sensitive.</li>
-			<li>If you input any text other than the above, you will get an error and be prompted to try the round again.</li>
-		</ol>
-		<p>Have fun!</p>
+		<div id="main-container">
+			<header>
+				<h1>Rock | Paper | Scissors</h1>
+			</header>
+			<p>Rules:
+				<ol>
+					<li>Rock beats Scissors.</li>
+					<li>Scissors beat Paper.</li>
+					<li>Paper beats Rock.</li>
+					<li>In the event of a tie, the same round is repeated until there is a winner.</li>
+					<li>First to five points wins!</li>
+				</ol>
+			</p>
 
-		<input id="playGame" type="button" value="Play!" onclick="game();" />
+			<div id="scores">
+				<div class="score-box">
+					<p>You</p>
+					<div class="player-score" id="player-score"></div>
+				</div>
+				<div class="score-box">
+					<p>Rounds Played</p>
+					<div class="player-score" id="round"></div>
+				</div>
+				<div class="score-box">
+					<p>Computer</p>
+					<div class="player-score" id="comp-score"></div>
+				</div>
+			</div>
+
+			<div id="current-play">
+				<div class="play-box">
+					<p>You Play:</p>
+					<div class="play-display" id="playerMove"></div>
+				</div>
+				<div class="play-box">
+					<p>Computer Plays:</p>
+					<div class="play-display" id="compMove"></div>
+				</div>
+			</div>
+
+			<div id="feedback">
+				<div class="play-box">
+					<p>Result:</p>
+					<div class="play-display" id="result"></div>
+				</div>
+			</div>
+
+			<div class="buttons">
+				<button type="button" id="rock">Rock!</button>
+				<button type="button" id="paper">Paper!</button>
+				<button type="button" id="scissors">Scissors!</button>
+			</div>
+
+			<!--
+			<div class="buttons">
+				<button type="reset" id="reset">Reset</button>
+			</div>
+			-->
+		</div>
+
+		
+
+		<script src="rockpaperscissors.js"></script>
+		<!--<input id="playGame" type="button" value="Play!" onclick="game();" />-->
+		
 	</body>
 </html>
 
