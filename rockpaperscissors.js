@@ -140,8 +140,8 @@ function scoreDisplayUpdate(winner) {
     currentCompScore.textContent = computerScore;
     compScoreDisplay.appendChild(currentCompScore);
 
-    currentRound.textContent = rounds;
-    roundDisplay.appendChild(currentRound);
+    //currentRound.textContent = rounds;
+    //roundDisplay.appendChild(currentRound);
 }
 
 function showWinner() {
@@ -160,12 +160,29 @@ function showWinner() {
     }
 }
 
-const buttons = document.querySelectorAll('button');
-buttons.forEach((button) => {
-    button.addEventListener('click', () => {
-            whoWon = playRound(convertPlayerMoveToInt(button.id), getComputerMove());
-            scoreDisplayUpdate(whoWon);
-            showWinner();
-    });
-});
+function reset() {
+    userScore = 0;
+    computerScore = 0;
+    rounds = 0;
 
+    currentPlayerMove.textContent = "";
+    userMoveDisplay.appendChild(currentPlayerMove);
+
+    currentCompMove.textContent = "";
+    compMoveDisplay.appendChild(currentCompMove);
+
+    currentPlayerScore.textContent = "";
+    playerScoreDisplay.appendChild(currentPlayerScore);
+
+    currentCompScore.textContent = "";
+    compScoreDisplay.appendChild(currentCompScore);
+
+    currentResult.textContent = "";
+    playerFeedbackDisplay.appendChild(currentResult);
+}
+
+function onClickPlay(play) {
+    whoWon = playRound(convertPlayerMoveToInt(play), getComputerMove());
+    scoreDisplayUpdate(whoWon);
+    showWinner();           
+}

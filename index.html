@@ -12,35 +12,25 @@
 			<header>
 				<h1>Rock | Paper | Scissors</h1>
 			</header>
-			<p>Rules:
-				<ol>
-					<li>Rock beats Scissors.</li>
-					<li>Scissors beat Paper.</li>
-					<li>Paper beats Rock.</li>
-					<li>In the event of a tie, the same round is repeated until there is a winner.</li>
-					<li>First to five points wins!</li>
-				</ol>
+			<p>First to five wins! In the event of a tie, repeat the round!
 			</p>
 
 			<div id="scores">
+				<div class="play-box">
+					<p>You Play:</p>
+					<div class="play-display" id="playerMove"></div>
+				</div>
 				<div class="score-box">
 					<p>You</p>
 					<div class="player-score" id="player-score"></div>
 				</div>
-				<div class="score-box">
+				<!-- <div class="score-box">
 					<p>Rounds Played</p>
 					<div class="player-score" id="round"></div>
-				</div>
+				</div> -->
 				<div class="score-box">
 					<p>Computer</p>
 					<div class="player-score" id="comp-score"></div>
-				</div>
-			</div>
-
-			<div id="current-play">
-				<div class="play-box">
-					<p>You Play:</p>
-					<div class="play-display" id="playerMove"></div>
 				</div>
 				<div class="play-box">
 					<p>Computer Plays:</p>
@@ -56,16 +46,16 @@
 			</div>
 
 			<div class="buttons">
-				<button type="button" id="rock">Rock!</button>
-				<button type="button" id="paper">Paper!</button>
-				<button type="button" id="scissors">Scissors!</button>
+				<button type="button" id="rock" class="play-button" onclick="onClickPlay('rock');">Rock!</button>
+				<button type="button" id="paper" class="play-button" onclick="onClickPlay('paper');">Paper!</button>
+				<button type="button" id="scissors" class="play-button" onclick="onClickPlay('scissors');">Scissors!</button>
 			</div>
 
-			<!--
+			
 			<div class="buttons">
-				<button type="reset" id="reset">Reset</button>
+				<button type="reset" id="reset" onclick="reset();">Reset</button>
 			</div>
-			-->
+			
 		</div>
 
 		
